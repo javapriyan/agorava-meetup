@@ -5,7 +5,7 @@
     <artifactId>agorava-meetup-api</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    
+    <name>Agorava Meetup - API</name>
     <parent>
         <groupId>org.agorava</groupId>
         <artifactId>agorava-meetup-parent</artifactId>

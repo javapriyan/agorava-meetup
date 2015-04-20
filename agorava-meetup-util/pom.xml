@@ -5,6 +5,7 @@
     <artifactId>agorava-meetup-util</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <name>Agorava Meetup - Util</name>
     
     <parent>
         <groupId>org.agorava</groupId>
@@ -21,7 +22,6 @@
         <dependency>
             <groupId>org.apache.deltaspike.core</groupId>
             <artifactId>deltaspike-core-impl</artifactId>
-            <version>1.2.1</version>
         </dependency>
 
         <dependency>
