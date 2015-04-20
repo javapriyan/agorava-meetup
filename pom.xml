@@ -5,7 +5,7 @@
     <artifactId>agorava-meetup-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+    <name>Agorava Meetup</name>
     <parent>
         <artifactId>agorava-parent</artifactId>
         <groupId>org.agorava</groupId>
