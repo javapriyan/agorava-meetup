@@ -72,5 +72,6 @@
         <module>agorava-meetup-api</module>
         <module>agorava-meetup-cdi</module>
         <module>agorava-meetup-util</module>
-    </modules>
+    <module>agorava-meetup-web</module>
+  </modules>
 </project>
