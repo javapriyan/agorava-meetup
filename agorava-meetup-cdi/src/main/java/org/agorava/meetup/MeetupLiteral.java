@@ -16,7 +16,7 @@
 package org.agorava.meetup;
 
 import javax.enterprise.util.AnnotationLiteral;
-
+import org.agorava.meetup.Meetup;
 /**
  *
  * @author rhegde
