@@ -24,6 +24,7 @@ import org.agorava.spi.ProviderConfigOauth20Final;
  *
  * @author rhegde
  */
+@Meetup
 public class MeetupConfigOauth extends ProviderConfigOauth20Final {
 
     //https://secure.meetup.com/oauth2/authorize?client_id=YOUR_CONSUMER_KEY&response_type=token&redirect_uri=YOUR_CONSUMER_REDIRECT_URI
