@@ -27,6 +27,8 @@ import org.agorava.oauth.OAuth20FinalServiceImpl;
  *
  * @author rhegde
  */
+@GenericBean
+@OAuth(OAuth.OAuthVersion.OTHER)
 public class MeetupOAuth20Service extends OAuth20FinalServiceImpl {
 
     @Override
