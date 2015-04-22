@@ -31,5 +31,7 @@ public class MeetupProfile {
    private String memberState;
    private String name;
    
+   private String type;
+   
     
 }
