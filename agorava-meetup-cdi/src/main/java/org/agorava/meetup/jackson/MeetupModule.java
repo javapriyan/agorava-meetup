@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.agorava.meetup.model;
-import org.agorava.spi.UserProfile;
+package org.agorava.meetup.jackson;
+
+import com.fasterxml.jackson.databind.module.SimpleModule;
+
 /**
  *
  * @author rhegde
  */
-public class MeetupProfile {
+public class MeetupModule extends SimpleModule {
+
+    public MeetupModule() {
+            super("MeetupModule");
+    }
     
-   private String additional;
-   private String bio;
-   private String comment;
-   private String created;
-   private String updated;
-   private String memberCity;
-   private String memberCountry;
-   private String memberState;
-   private String name;
-   
-   private String type;
-   
+     @Override
+    public void setupModule(SetupContext context) {
+       // context.setMixInAnnotations(GithubProfile.class, GithubProfileMixin.class);
+    }
+    
     
 }

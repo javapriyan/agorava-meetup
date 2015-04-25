@@ -13,25 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.agorava.meetup.model;
-import org.agorava.spi.UserProfile;
+package org.agorava.meetup.jackson;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  *
  * @author rhegde
  */
-public class MeetupProfile {
-    
-   private String additional;
-   private String bio;
-   private String comment;
-   private String created;
-   private String updated;
-   private String memberCity;
-   private String memberCountry;
-   private String memberState;
-   private String name;
-   
-   private String type;
-   
+@JsonIgnoreProperties(ignoreUnknown = true)
+abstract class ProfileMixin extends ResponseMixin {
+
+    public ProfileMixin(MetaMixin meta) {
+        super(meta);
+    }
     
 }

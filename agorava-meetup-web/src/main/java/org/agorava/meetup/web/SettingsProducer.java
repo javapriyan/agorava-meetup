@@ -13,25 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.agorava.meetup.model;
-import org.agorava.spi.UserProfile;
+package org.agorava.meetup.web;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Produces;
+import org.agorava.api.oauth.application.OAuthAppSettings;
+import org.agorava.api.oauth.application.OAuthAppSettingsBuilder;
+import org.agorava.api.oauth.application.OAuthApplication;
+import org.agorava.api.oauth.application.Param;
+import org.agorava.meetup.Meetup;
+
 /**
  *
  * @author rhegde
  */
-public class MeetupProfile {
+public class SettingsProducer {
     
-   private String additional;
-   private String bio;
-   private String comment;
-   private String created;
-   private String updated;
-   private String memberCity;
-   private String memberCountry;
-   private String memberState;
-   private String name;
-   
-   private String type;
-   
-    
+    @ApplicationScoped
+    @Produces
+    @Meetup
+    @OAuthApplication(params = {@Param(name = OAuthAppSettingsBuilder.PREFIX, value = "meetup")})
+    public OAuthAppSettings meetupSettings;
 }
