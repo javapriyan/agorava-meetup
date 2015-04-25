@@ -16,6 +16,7 @@
 package org.agorava.meetup.service;
 
 import org.agorava.meetup.model.MeetupProfile;
+import org.agorava.meetup.response.MeetupProfileResponse;
 
 /**
  *
@@ -24,7 +25,7 @@ import org.agorava.meetup.model.MeetupProfile;
 public interface ProfileService {
      static String PROFILE_URL  = "/2/profiles";
 
-    MeetupProfile getUserProfile();
+    MeetupProfileResponse getUserProfile();
     
 
 }

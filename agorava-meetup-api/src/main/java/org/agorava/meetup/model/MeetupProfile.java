@@ -30,6 +30,6 @@ public class MeetupProfile {
    private String memberCountry;
    private String memberState;
    private String name;
-   
-    
+
+
 }

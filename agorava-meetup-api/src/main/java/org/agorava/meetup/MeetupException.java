@@ -26,5 +26,8 @@ public class MeetupException extends AgoravaException {
     public MeetupException(String message, Exception cause) {
         super(message, cause);
     }
-    
+
+    public MeetupException(String exceptionMsg) {
+        super(exceptionMsg);
+    }
 }
