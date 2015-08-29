@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Socializer Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet name="bootstrap.min.css" library="css"/>
+    <h:outputStylesheet name="bootstrap-responsive.min.css" library="css"/>
+    <h:outputStylesheet name="screen.css" library="css"/>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <h:outputScript name="bootstrap.min.js" library="javascript"/>
+    <h:outputScript name="main.js" library="javascript"/>
+    </h:head>
+    <h:body>
+         <div class="well">
+                    <h3>Available services</h3>
+
+                    <h:form>
+                        <ul class="unstyled social-services clearfix">
+                            <ui:repeat var="service"
+                                       value="#{socialClient.listOfServices}">
+                                <li><h:outputLink value="#"
+                                                  onclick="window.open('startoauth.jsf?service=#{service}','oauth','toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width=400,height=400,modal=yes')">
+                                <h:graphicImage id="serviceIcon" library="gfx"
+                                                    name="#{service}.png" height="48" width="48"
+                                                    styleClass="tooltip-bottom" title="#{service}"/>
+                                </h:outputLink></li>
+                            </ui:repeat>
+                        </ul>
+                    </h:form>
+                </div>
+    </h:body>
+</html>
+

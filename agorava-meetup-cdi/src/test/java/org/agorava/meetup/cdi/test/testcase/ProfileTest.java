@@ -13,24 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.agorava.meetup.model;
-import org.agorava.spi.UserProfile;
+package org.agorava.meetup.cdi.test.testcase;
+
+import org.agorava.meetup.cdi.test.MeetupTestDeploy;
+import org.jboss.arquillian.junit.Arquillian;
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 /**
  *
  * @author rhegde
  */
-public class MeetupProfile {
-    
-   private String additional;
-   private String bio;
-   private String comment;
-   private String created;
-   private String updated;
-   private String memberCity;
-   private String memberCountry;
-   private String memberState;
-   private String name;
-   private String type;
-   
+@RunWith(Arquillian.class)
+public class ProfileTest extends MeetupTestDeploy {
+       @Test
+    public void authorizationUrlTest() {
+        assertTrue(service.getAuthorizationUrl().startsWith("https"));
+    }
     
 }
